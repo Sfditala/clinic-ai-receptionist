@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clinic AI Receptionist · Tala Safadi</title>
+<meta name="description" content="A Telegram receptionist for a dental clinic that answers from approved information and refuses to guess. n8n workflow and interactive explorer.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="site/style.css">
+</head>
+<body>
+<header class="hero">
+  <p class="eyebrow"><span>//</span> rag · text and voice · no guessing</p>
+  <h1>A receptionist that <em>refuses to guess.</em></h1>
+  <p class="lede">A Telegram receptionist for a dental clinic. It answers questions about hours, services, doctors and insurance only from the clinic's approved information, by text or voice, in Arabic or English.</p>
+  <p><span class="badge">Demo · fictional clinic, sample data</span></p>
+  <div class="hero-links">
+    <a class="btn solid" href="#signature">Explore it</a>
+    <a class="btn" href="https://github.com/Sfditala/clinic-ai-receptionist">View on GitHub</a>
+    <a class="btn" href="workflow.json" download="clinic-ai-receptionist.json">Download workflow</a>
+  </div>
+  <dl class="stats" id="stats"></dl>
+</header>
+
+<main>
+  <section class="signature" id="signature"></section>
+
+  <section class="stage" aria-label="Workflow explorer">
+    <div class="trace-bar">
+      <div class="trace-picks" id="tracePicks" role="group" aria-label="Choose a path"></div>
+      <div class="trace-ctl">
+        <button id="prev" class="icon" aria-label="Previous step">‹</button>
+        <button id="play" class="play">▶ Play</button>
+        <button id="next" class="icon" aria-label="Next step">›</button>
+        <span class="count" id="count"></span>
+      </div>
+    </div>
+    <div class="caption" id="caption" aria-live="polite"></div>
+    <div class="workspace">
+      <div class="canvas-wrap" id="canvasWrap">
+        <svg id="canvas" role="img" aria-label="Workflow canvas"></svg>
+        <div class="canvas-ctl">
+          <button id="zoomIn" aria-label="Zoom in">+</button>
+          <button id="zoomOut" aria-label="Zoom out">−</button>
+          <button id="fit">Fit</button>
+        </div>
+        <div class="legend" id="legend"></div>
+      </div>
+      <aside class="panel" id="panel"></aside>
+    </div>
+    <p class="fine">Paths follow the workflow's real connections. They're guided examples, not logs of a run. Inside an agent, the model chooses which tools to call.</p>
+  </section>
+
+  <section class="story" id="story"></section>
+</main>
+
+<footer>
+  <p>Built by <a href="https://portfolio-mauve-seven-44.vercel.app/">Tala Safadi</a>, AI Engineer. Have a process that's eating your team's time? <a href="https://portfolio-mauve-seven-44.vercel.app/">Tell my agent about it.</a></p>
+  <p>More systems: <a href="https://sfditala.github.io/ai-marketing-team/">AI Marketing Team</a> · <a href="https://sfditala.github.io/telegram-personal-assistant/">Telegram Personal Assistant</a></p>
+</footer>
+
+<script src="site/data.js"></script>
+<script src="site/app.js"></script>
+</body>
+</html>
